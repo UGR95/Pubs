@@ -57,6 +57,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\WCFPubs\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="DatosPubs.cs" />
     <Compile Include="Fachada\DetalleUsuario.cs" />
     <Compile Include="frmAltaAutores.cs">
@@ -304,6 +309,19 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Connected Services\WCFPubs\Pubs.WCFPubs.DetalleUsuario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WCFPubs\Service1.wsdl" />
+    <None Include="Connected Services\WCFPubs\ServicePubs.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WCFPubs\ServicePubs1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WCFPubs\ServicePubs2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -318,12 +336,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\WCFPubs\ServicePubs.disco" />
+    <None Include="Connected Services\WCFPubs\configuration91.svcinfo" />
+    <None Include="Connected Services\WCFPubs\configuration.svcinfo" />
+    <None Include="Connected Services\WCFPubs\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Resources\exit_to_app_FILL0_wght400_GRAD0_opsz48.png" />
     <Content Include="Resources\logout_FILL0_wght400_GRAD0_opsz48.png" />
     <Content Include="Resources\supervisor_account_FILL0_wght400_GRAD0_opsz48.png" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\WCFPubs\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

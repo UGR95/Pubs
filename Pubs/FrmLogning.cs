@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
 using Pubs.Fachada;
+using Pubs.WCFPubs;
 
 namespace Pubs
 {
@@ -36,8 +37,7 @@ namespace Pubs
         {
             menu = new frmMenu();
             venta = new frmAltaVentas();
-            DetalleUsuario detalle = new DetalleUsuario();
-            List<DetalleUsuario> ListaDetalle = null;
+            IServicePubs wcfpubs = new ServicePubsClient();
             try
             {
                 string Usuario = txtUsuario.Text;
@@ -47,11 +47,11 @@ namespace Pubs
 
                 datos = new DatosPubs();
 
-                ListaDetalle = datos.ValidaUsuario(Usuario, Contrasena, true);
+                var DetalleUsuario = wcfpubs.ValidaUsuario(Usuario, Contrasena);//datos.ValidaUsuario(Usuario, Contrasena, true);
 
-                if (ListaDetalle.Count > 0)
+                if (DetalleUsuario.Count() > 0)
                 {
-                    foreach (DetalleUsuario obj in ListaDetalle)
+                    foreach (var obj in DetalleUsuario)
                     {
                         nombreUsuario = Usuario;
                         menu.Load += (a, args) =>

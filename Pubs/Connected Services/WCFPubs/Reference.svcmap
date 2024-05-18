@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f24cf94f-1099-48c3-9d27-d8c6780f2695" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:52470/ServicePubs.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServicePubs.xsd" MetadataType="Schema" ID="dc6df075-21b0-471c-9352-8bd0b8250702" SourceId="1" SourceUrl="http://localhost:52470/ServicePubs.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServicePubs.disco" MetadataType="Disco" ID="7f743efb-70a2-4585-a6b3-4bceff11e6e0" SourceId="1" SourceUrl="http://localhost:52470/ServicePubs.svc?disco" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="cad89968-6685-4a8a-b4b7-932b65ff0890" SourceId="1" SourceUrl="http://localhost:52470/ServicePubs.svc?wsdl" />
+    <MetadataFile FileName="ServicePubs1.xsd" MetadataType="Schema" ID="40e93303-1244-41bd-bd81-b7c4082e0595" SourceId="1" SourceUrl="http://localhost:52470/ServicePubs.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServicePubs2.xsd" MetadataType="Schema" ID="88708ce2-6c2b-4463-a5a2-8c1d64a39e0b" SourceId="1" SourceUrl="http://localhost:52470/ServicePubs.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
