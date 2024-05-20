@@ -23,6 +23,9 @@ namespace Pubs.WCFPubs {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ErrorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool EsAdminField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -35,6 +38,19 @@ namespace Pubs.WCFPubs {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Error {
+            get {
+                return this.ErrorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ErrorField, value) != true)) {
+                    this.ErrorField = value;
+                    this.RaisePropertyChanged("Error");
+                }
             }
         }
         
@@ -74,6 +90,195 @@ namespace Pubs.WCFPubs {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DetalleVistaAutores", Namespace="http://schemas.datacontract.org/2004/07/WcfSPubs.Fachada")]
+    [System.SerializableAttribute()]
+    public partial class DetalleVistaAutores : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ApellidoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CiudadField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CodigoPostalField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool ContratoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DireccionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EstadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IdAutorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MensajeErrorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NombreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TelefonoField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Apellido {
+            get {
+                return this.ApellidoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ApellidoField, value) != true)) {
+                    this.ApellidoField = value;
+                    this.RaisePropertyChanged("Apellido");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Ciudad {
+            get {
+                return this.CiudadField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CiudadField, value) != true)) {
+                    this.CiudadField = value;
+                    this.RaisePropertyChanged("Ciudad");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CodigoPostal {
+            get {
+                return this.CodigoPostalField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CodigoPostalField, value) != true)) {
+                    this.CodigoPostalField = value;
+                    this.RaisePropertyChanged("CodigoPostal");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Contrato {
+            get {
+                return this.ContratoField;
+            }
+            set {
+                if ((this.ContratoField.Equals(value) != true)) {
+                    this.ContratoField = value;
+                    this.RaisePropertyChanged("Contrato");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Direccion {
+            get {
+                return this.DireccionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DireccionField, value) != true)) {
+                    this.DireccionField = value;
+                    this.RaisePropertyChanged("Direccion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Estado {
+            get {
+                return this.EstadoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.EstadoField, value) != true)) {
+                    this.EstadoField = value;
+                    this.RaisePropertyChanged("Estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string IdAutor {
+            get {
+                return this.IdAutorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IdAutorField, value) != true)) {
+                    this.IdAutorField = value;
+                    this.RaisePropertyChanged("IdAutor");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string MensajeError {
+            get {
+                return this.MensajeErrorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MensajeErrorField, value) != true)) {
+                    this.MensajeErrorField = value;
+                    this.RaisePropertyChanged("MensajeError");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nombre {
+            get {
+                return this.NombreField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
+                    this.NombreField = value;
+                    this.RaisePropertyChanged("Nombre");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Telefono {
+            get {
+                return this.TelefonoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TelefonoField, value) != true)) {
+                    this.TelefonoField = value;
+                    this.RaisePropertyChanged("Telefono");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="WCFPubs.IServicePubs")]
     public interface IServicePubs {
@@ -83,6 +288,12 @@ namespace Pubs.WCFPubs {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicePubs/ValidaUsuario", ReplyAction="http://tempuri.org/IServicePubs/ValidaUsuarioResponse")]
         System.Threading.Tasks.Task<Pubs.WCFPubs.DetalleUsuario[]> ValidaUsuarioAsync(string Usuario, string Contrasena);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicePubs/ObtenerAutores", ReplyAction="http://tempuri.org/IServicePubs/ObtenerAutoresResponse")]
+        Pubs.WCFPubs.DetalleVistaAutores[] ObtenerAutores();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicePubs/ObtenerAutores", ReplyAction="http://tempuri.org/IServicePubs/ObtenerAutoresResponse")]
+        System.Threading.Tasks.Task<Pubs.WCFPubs.DetalleVistaAutores[]> ObtenerAutoresAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -118,6 +329,14 @@ namespace Pubs.WCFPubs {
         
         public System.Threading.Tasks.Task<Pubs.WCFPubs.DetalleUsuario[]> ValidaUsuarioAsync(string Usuario, string Contrasena) {
             return base.Channel.ValidaUsuarioAsync(Usuario, Contrasena);
+        }
+        
+        public Pubs.WCFPubs.DetalleVistaAutores[] ObtenerAutores() {
+            return base.Channel.ObtenerAutores();
+        }
+        
+        public System.Threading.Tasks.Task<Pubs.WCFPubs.DetalleVistaAutores[]> ObtenerAutoresAsync() {
+            return base.Channel.ObtenerAutoresAsync();
         }
     }
 }

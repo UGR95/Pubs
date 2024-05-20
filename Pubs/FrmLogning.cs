@@ -16,13 +16,12 @@ namespace Pubs
 {
     public partial class FrmLoging : Form
     {
-        private const string cadenaConexion = "Data Source=DESKTOP-7789AN9\\SQLEXPRESS;Initial Catalog" +
-            " = pubs; Integrated Security = True";
         frmMenu menu;
         frmAltaVentas venta;
         DatosPubs datos;
         public static string nombreUsuario;
         public static bool EsAdministrador = false;
+
         public FrmLoging()
         {
             InitializeComponent();

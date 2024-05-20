@@ -16,4 +16,16 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="ObtenerAutores">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAutoresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfSPubs.Fachada" minOccurs="0" name="ObtenerAutoresResult" nillable="true" type="q2:ArrayOfDetalleVistaAutores" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

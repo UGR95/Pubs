@@ -8,9 +8,31 @@
   <xs:element name="ArrayOfDetalleUsuario" nillable="true" type="tns:ArrayOfDetalleUsuario" />
   <xs:complexType name="DetalleUsuario">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="EsAdmin" type="xs:boolean" />
       <xs:element minOccurs="0" name="NombreUsuario" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DetalleUsuario" nillable="true" type="tns:DetalleUsuario" />
+  <xs:complexType name="ArrayOfDetalleVistaAutores">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DetalleVistaAutores" nillable="true" type="tns:DetalleVistaAutores" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDetalleVistaAutores" nillable="true" type="tns:ArrayOfDetalleVistaAutores" />
+  <xs:complexType name="DetalleVistaAutores">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Apellido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ciudad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoPostal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contrato" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdAutor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensajeError" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Telefono" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DetalleVistaAutores" nillable="true" type="tns:DetalleVistaAutores" />
 </xs:schema>
