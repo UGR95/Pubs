@@ -78,8 +78,8 @@ namespace Pubs
             }
             catch (Exception ex)
             {
-
-                throw;
+                MessageBox.Show(ex.ToString());
+                
             }
         }
 

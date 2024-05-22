@@ -133,7 +133,6 @@ namespace Pubs
                         // Actualizar el DataGridView después de la eliminación
                         try
                         {
-
                             dgvStock.DataSource = datos.VistaStock();
                         }
                         catch (Exception ex)

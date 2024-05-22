@@ -28,17 +28,27 @@ namespace Pubs
         public void ActualizarDataGridView()
         {
 
-            IServicePubs servicePubs = new ServicePubsClient();
-            try
-            {
-                dgvAutores.DataSource = servicePubs.ObtenerAutores();   
+                IServicePubs servicePubs = new ServicePubsClient();
+                try
+                {
+                    dgvAutores.DataSource = servicePubs.ObtenerAutores();
+                    dgvAutores.Columns["IdAutor"].DisplayIndex = 0;
+                    dgvAutores.Columns["Apellido"].DisplayIndex = 1;
+                    dgvAutores.Columns["Nombre"].DisplayIndex = 2;
+                    dgvAutores.Columns["Telefono"].DisplayIndex = 3;
+                    dgvAutores.Columns["Direccion"].DisplayIndex = 4;
+                    dgvAutores.Columns["Ciudad"].DisplayIndex = 5;
+                    dgvAutores.Columns["Estado"].DisplayIndex = 6;
+                    dgvAutores.Columns["CodigoPostal"].DisplayIndex = 7;
+                    dgvAutores.Columns["Contrato"].DisplayIndex = 8;
+                    dgvAutores.Columns["MensajeError"].Visible = false;
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-            Refresh();
-            LlenarAutor();
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+                Refresh();
+                LlenarAutor();
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)

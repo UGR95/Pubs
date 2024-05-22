@@ -294,6 +294,12 @@ namespace Pubs.WCFPubs {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicePubs/ObtenerAutores", ReplyAction="http://tempuri.org/IServicePubs/ObtenerAutoresResponse")]
         System.Threading.Tasks.Task<Pubs.WCFPubs.DetalleVistaAutores[]> ObtenerAutoresAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicePubs/InsertarAutor", ReplyAction="http://tempuri.org/IServicePubs/InsertarAutorResponse")]
+        string InsertarAutor(string IdAutor, string Nombre, string Apellido, string Telefono, string Direccion, string Ciudad, string Estado, string CodPostal, bool Contrato);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicePubs/InsertarAutor", ReplyAction="http://tempuri.org/IServicePubs/InsertarAutorResponse")]
+        System.Threading.Tasks.Task<string> InsertarAutorAsync(string IdAutor, string Nombre, string Apellido, string Telefono, string Direccion, string Ciudad, string Estado, string CodPostal, bool Contrato);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -337,6 +343,14 @@ namespace Pubs.WCFPubs {
         
         public System.Threading.Tasks.Task<Pubs.WCFPubs.DetalleVistaAutores[]> ObtenerAutoresAsync() {
             return base.Channel.ObtenerAutoresAsync();
+        }
+        
+        public string InsertarAutor(string IdAutor, string Nombre, string Apellido, string Telefono, string Direccion, string Ciudad, string Estado, string CodPostal, bool Contrato) {
+            return base.Channel.InsertarAutor(IdAutor, Nombre, Apellido, Telefono, Direccion, Ciudad, Estado, CodPostal, Contrato);
+        }
+        
+        public System.Threading.Tasks.Task<string> InsertarAutorAsync(string IdAutor, string Nombre, string Apellido, string Telefono, string Direccion, string Ciudad, string Estado, string CodPostal, bool Contrato) {
+            return base.Channel.InsertarAutorAsync(IdAutor, Nombre, Apellido, Telefono, Direccion, Ciudad, Estado, CodPostal, Contrato);
         }
     }
 }

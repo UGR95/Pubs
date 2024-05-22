@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pubs.WCFPubs;
 
 namespace Pubs
 {
@@ -21,13 +22,38 @@ namespace Pubs
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             DatosPubs datos = new DatosPubs();
+
+            IServicePubs servicePubs = new ServicePubsClient();
+            string Error;
+            string IdAutor, Nombre, Apellido, Telefono, Direccion, Ciudad, Estado, CodPostal;
+            bool Contrato;
             try
             {
+                mtxtIdAutor.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
+                IdAutor = mtxtIdAutor.Text;
+                Nombre = txtNombre.Text;
+                Apellido = txtApellido.Text;
 
-                datos.AltaAutores(mtxtIdAutor.Text, txtNombre.Text, txtApellido.Text, mtxtTelefono.Text,
-                    txtDireccion.Text, txtCiudad.Text, cbEstado.SelectedItem.ToString(), txtCodigoPostal.Text, chkbContrato.Checked);
+                mtxtTelefono.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
+                Telefono = mtxtTelefono.Text;
 
-                MessageBox.Show("Autor agregado", "Informativo", MessageBoxButtons.OK);
+                Direccion = txtDireccion.Text;
+                Ciudad = txtCiudad.Text;
+                Estado = cbEstado.SelectedItem.ToString();
+                CodPostal = txtCodigoPostal.Text;
+                Contrato = chkbContrato.Checked;
+                
+               Error =  servicePubs.InsertarAutor(IdAutor, Nombre, Apellido, Telefono, Direccion, Ciudad, Estado, CodPostal, Contrato);
+
+                //datos.AltaAutores(mtxtIdAutor.Text, txtNombre.Text, txtApellido.Text, mtxtTelefono.Text,
+                //    txtDireccion.Text, txtCiudad.Text, cbEstado.SelectedItem.ToString(), txtCodigoPostal.Text, chkbContrato.Checked);
+
+                if (Error == "1")
+                {
+                    MessageBox.Show("Autor agregado", "Informativo", MessageBoxButtons.OK);
+                }
+                else
+                    MessageBox.Show(Error, "Error", MessageBoxButtons.OK);
 
                 //Se usa componente MaskedTextBox para dar formato al textbox se puede modificar su propiedad en "Propiedades > Mask dar en los 3 puntos y seleccionar o generar un mascarado
                 mtxtIdAutor.Clear();//MaskedTextBox
