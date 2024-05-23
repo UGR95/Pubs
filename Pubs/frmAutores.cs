@@ -167,14 +167,14 @@ namespace Pubs
                 DataGridViewRow filaSeleccionada = dgvAutores.CurrentRow;
 
                 // Obtener los valores de las celdas de la fila seleccionada
-                string valorColumna1 = filaSeleccionada.Cells["ID Autor"].Value.ToString();
+                string valorColumna1 = filaSeleccionada.Cells["Idautor"].Value.ToString();
                 string valorColumna2 = filaSeleccionada.Cells["Apellido"].Value.ToString();
                 string valorColumna3 = filaSeleccionada.Cells["Nombre"].Value.ToString();
-                string valorColumna4 = filaSeleccionada.Cells["Teléfono"].Value.ToString();
-                string valorColumna5 = filaSeleccionada.Cells["Dirección"].Value.ToString();
+                string valorColumna4 = filaSeleccionada.Cells["Telefono"].Value.ToString();
+                string valorColumna5 = filaSeleccionada.Cells["Direccion"].Value.ToString();
                 string valorColumna6 = filaSeleccionada.Cells["Ciudad"].Value.ToString();
                 string valorColumna7 = filaSeleccionada.Cells["Estado"].Value.ToString();
-                string valorColumna8 = filaSeleccionada.Cells["Código Postal"].Value.ToString();
+                string valorColumna8 = filaSeleccionada.Cells["CodigoPostal"].Value.ToString();
                 object valorObjeto = filaSeleccionada.Cells["Contrato"].Value;
                 bool valorColumna9;
 

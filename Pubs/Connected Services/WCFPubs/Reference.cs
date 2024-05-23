@@ -300,6 +300,12 @@ namespace Pubs.WCFPubs {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicePubs/InsertarAutor", ReplyAction="http://tempuri.org/IServicePubs/InsertarAutorResponse")]
         System.Threading.Tasks.Task<string> InsertarAutorAsync(string IdAutor, string Nombre, string Apellido, string Telefono, string Direccion, string Ciudad, string Estado, string CodPostal, bool Contrato);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicePubs/ActualizaAutor", ReplyAction="http://tempuri.org/IServicePubs/ActualizaAutorResponse")]
+        string ActualizaAutor(string IdAutor, string Nombre, string Apellido, string Telefono, string Direccion, string Ciudad, string Estado, string CodPostal, bool Contrato);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicePubs/ActualizaAutor", ReplyAction="http://tempuri.org/IServicePubs/ActualizaAutorResponse")]
+        System.Threading.Tasks.Task<string> ActualizaAutorAsync(string IdAutor, string Nombre, string Apellido, string Telefono, string Direccion, string Ciudad, string Estado, string CodPostal, bool Contrato);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -351,6 +357,14 @@ namespace Pubs.WCFPubs {
         
         public System.Threading.Tasks.Task<string> InsertarAutorAsync(string IdAutor, string Nombre, string Apellido, string Telefono, string Direccion, string Ciudad, string Estado, string CodPostal, bool Contrato) {
             return base.Channel.InsertarAutorAsync(IdAutor, Nombre, Apellido, Telefono, Direccion, Ciudad, Estado, CodPostal, Contrato);
+        }
+        
+        public string ActualizaAutor(string IdAutor, string Nombre, string Apellido, string Telefono, string Direccion, string Ciudad, string Estado, string CodPostal, bool Contrato) {
+            return base.Channel.ActualizaAutor(IdAutor, Nombre, Apellido, Telefono, Direccion, Ciudad, Estado, CodPostal, Contrato);
+        }
+        
+        public System.Threading.Tasks.Task<string> ActualizaAutorAsync(string IdAutor, string Nombre, string Apellido, string Telefono, string Direccion, string Ciudad, string Estado, string CodPostal, bool Contrato) {
+            return base.Channel.ActualizaAutorAsync(IdAutor, Nombre, Apellido, Telefono, Direccion, Ciudad, Estado, CodPostal, Contrato);
         }
     }
 }

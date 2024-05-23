@@ -19,6 +19,11 @@ namespace Pubs
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             DatosPubs datos = new DatosPubs();

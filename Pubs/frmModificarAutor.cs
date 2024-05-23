@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pubs.WCFPubs;
 
 namespace Pubs
 {
@@ -35,9 +36,11 @@ namespace Pubs
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            IServicePubs servicePubs = new ServicePubsClient();
             DatosPubs datos = new DatosPubs();
             try
             {
+                string Error;
                 string nuevoId = txtIdAutor.Text;
                 string nuevoNombre = txtNombre.Text;
                 string nuevoApellido = txtApellido.Text;
@@ -51,15 +54,23 @@ namespace Pubs
 
                 // Llamar al método de actualización en tu clase de acceso a datos
                 // Por ejemplo:
-                datos.ActualizarAutor(txtIdAutor.Text, nuevoNombre, nuevoApellido, nuevoTelefono, nuevaDireccion, nuevaCiudad, nuevoEstado, nuevoCodigoPostal, nuevoContrato);
+               Error =  servicePubs.ActualizaAutor(txtIdAutor.Text, nuevoNombre, nuevoApellido, nuevoTelefono, nuevaDireccion, nuevaCiudad, nuevoEstado, nuevoCodigoPostal, nuevoContrato);
 
-                MessageBox.Show("Autor modificado", "Informativo", MessageBoxButtons.OK);
 
-                frmAutores parentForm = (frmAutores)this.Owner;
-                parentForm.ActualizarDataGridView();
+                //datos.ActualizarAutor(txtIdAutor.Text, nuevoNombre, nuevoApellido, nuevoTelefono, nuevaDireccion, nuevaCiudad, nuevoEstado, nuevoCodigoPostal, nuevoContrato);
+                if (Error == "1")
+                {
+                    MessageBox.Show("Autor modificado", "Informativo", MessageBoxButtons.OK);
 
-                // Cerrar el formulario de Modificación
-                this.Close();
+                    frmAutores parentForm = (frmAutores)this.Owner;
+                    parentForm.ActualizarDataGridView();
+
+                    // Cerrar el formulario de Modificación
+                    this.Close();
+                }
+                else
+                    MessageBox.Show("Error al realizar la modificación: " + Error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
 
             }
             catch (Exception ex)
