@@ -309,6 +309,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Connected Services\WCFPubs\Pubs.WCFPubs.DetalleTitulos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\WCFPubs\Pubs.WCFPubs.DetalleUsuario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

@@ -279,6 +279,211 @@ namespace Pubs.WCFPubs {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DetalleTitulos", Namespace="http://schemas.datacontract.org/2004/07/WcfSPubs.Fachada")]
+    [System.SerializableAttribute()]
+    public partial class DetalleTitulos : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double AnticipoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ErrorField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime FechaPublicacionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IdEditorialField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IdTituloField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NotaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private double PrecioField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> RegaliasField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TipoLibroField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TituloField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> VentasAnioField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Anticipo {
+            get {
+                return this.AnticipoField;
+            }
+            set {
+                if ((this.AnticipoField.Equals(value) != true)) {
+                    this.AnticipoField = value;
+                    this.RaisePropertyChanged("Anticipo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Error {
+            get {
+                return this.ErrorField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ErrorField, value) != true)) {
+                    this.ErrorField = value;
+                    this.RaisePropertyChanged("Error");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime FechaPublicacion {
+            get {
+                return this.FechaPublicacionField;
+            }
+            set {
+                if ((this.FechaPublicacionField.Equals(value) != true)) {
+                    this.FechaPublicacionField = value;
+                    this.RaisePropertyChanged("FechaPublicacion");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string IdEditorial {
+            get {
+                return this.IdEditorialField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IdEditorialField, value) != true)) {
+                    this.IdEditorialField = value;
+                    this.RaisePropertyChanged("IdEditorial");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string IdTitulo {
+            get {
+                return this.IdTituloField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IdTituloField, value) != true)) {
+                    this.IdTituloField = value;
+                    this.RaisePropertyChanged("IdTitulo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nota {
+            get {
+                return this.NotaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NotaField, value) != true)) {
+                    this.NotaField = value;
+                    this.RaisePropertyChanged("Nota");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public double Precio {
+            get {
+                return this.PrecioField;
+            }
+            set {
+                if ((this.PrecioField.Equals(value) != true)) {
+                    this.PrecioField = value;
+                    this.RaisePropertyChanged("Precio");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Regalias {
+            get {
+                return this.RegaliasField;
+            }
+            set {
+                if ((this.RegaliasField.Equals(value) != true)) {
+                    this.RegaliasField = value;
+                    this.RaisePropertyChanged("Regalias");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TipoLibro {
+            get {
+                return this.TipoLibroField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TipoLibroField, value) != true)) {
+                    this.TipoLibroField = value;
+                    this.RaisePropertyChanged("TipoLibro");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Titulo {
+            get {
+                return this.TituloField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TituloField, value) != true)) {
+                    this.TituloField = value;
+                    this.RaisePropertyChanged("Titulo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> VentasAnio {
+            get {
+                return this.VentasAnioField;
+            }
+            set {
+                if ((this.VentasAnioField.Equals(value) != true)) {
+                    this.VentasAnioField = value;
+                    this.RaisePropertyChanged("VentasAnio");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="WCFPubs.IServicePubs")]
     public interface IServicePubs {
@@ -306,6 +511,12 @@ namespace Pubs.WCFPubs {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicePubs/ActualizaAutor", ReplyAction="http://tempuri.org/IServicePubs/ActualizaAutorResponse")]
         System.Threading.Tasks.Task<string> ActualizaAutorAsync(string IdAutor, string Nombre, string Apellido, string Telefono, string Direccion, string Ciudad, string Estado, string CodPostal, bool Contrato);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicePubs/ObtenerTitluos", ReplyAction="http://tempuri.org/IServicePubs/ObtenerTitluosResponse")]
+        Pubs.WCFPubs.DetalleTitulos[] ObtenerTitluos();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicePubs/ObtenerTitluos", ReplyAction="http://tempuri.org/IServicePubs/ObtenerTitluosResponse")]
+        System.Threading.Tasks.Task<Pubs.WCFPubs.DetalleTitulos[]> ObtenerTitluosAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -365,6 +576,14 @@ namespace Pubs.WCFPubs {
         
         public System.Threading.Tasks.Task<string> ActualizaAutorAsync(string IdAutor, string Nombre, string Apellido, string Telefono, string Direccion, string Ciudad, string Estado, string CodPostal, bool Contrato) {
             return base.Channel.ActualizaAutorAsync(IdAutor, Nombre, Apellido, Telefono, Direccion, Ciudad, Estado, CodPostal, Contrato);
+        }
+        
+        public Pubs.WCFPubs.DetalleTitulos[] ObtenerTitluos() {
+            return base.Channel.ObtenerTitluos();
+        }
+        
+        public System.Threading.Tasks.Task<Pubs.WCFPubs.DetalleTitulos[]> ObtenerTitluosAsync() {
+            return base.Channel.ObtenerTitluosAsync();
         }
     }
 }

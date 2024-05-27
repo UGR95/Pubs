@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pubs.WCFPubs;
 
 namespace Pubs
 {
@@ -25,14 +26,10 @@ namespace Pubs
         }
         public void ActualizarDataGridView()
         {
-            DatosPubs datos = new DatosPubs();
-
+            IServicePubs servicePubs = new ServicePubsClient();
             try
             {
-
-                dgvTitulos.DataSource = datos.VistaTitulos();
-
-
+                dgvTitulos.DataSource = servicePubs.ObtenerTitluos();
             }
             catch (Exception ex)
             {

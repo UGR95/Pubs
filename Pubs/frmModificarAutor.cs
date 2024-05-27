@@ -37,7 +37,6 @@ namespace Pubs
         private void btnModificar_Click(object sender, EventArgs e)
         {
             IServicePubs servicePubs = new ServicePubsClient();
-            DatosPubs datos = new DatosPubs();
             try
             {
                 string Error;

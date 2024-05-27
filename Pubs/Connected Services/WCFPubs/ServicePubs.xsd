@@ -35,4 +35,26 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DetalleVistaAutores" nillable="true" type="tns:DetalleVistaAutores" />
+  <xs:complexType name="ArrayOfDetalleTitulos">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DetalleTitulos" nillable="true" type="tns:DetalleTitulos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDetalleTitulos" nillable="true" type="tns:ArrayOfDetalleTitulos" />
+  <xs:complexType name="DetalleTitulos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Anticipo" type="xs:double" />
+      <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaPublicacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdEditorial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdTitulo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nota" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Precio" type="xs:double" />
+      <xs:element minOccurs="0" name="Regalias" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TipoLibro" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Titulo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VentasAnio" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DetalleTitulos" nillable="true" type="tns:DetalleTitulos" />
 </xs:schema>
